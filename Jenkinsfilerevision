@@ -15,12 +15,7 @@ pipeline{
               sh 'npm pack'
          }
       }
-      stage('upload artifactory'){
-         steps{
-         sh 'curl -uadmin:AP5CNW3E6mvDGwoPRSb2crkLwR2 -T  *.tgz \
-         "http://ec2-54-162-238-184.compute-1.amazonaws.com:8081/artifactory/nodejs-app/dev-app${BUILD_ID}.tgz"'
-         }
-      }
+     
       
     }
 }
