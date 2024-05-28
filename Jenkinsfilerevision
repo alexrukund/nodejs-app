@@ -9,6 +9,7 @@ pipeline{
             sh 'npm install'
         }
       }
+    }
       stage('package'){
          steps{
               sh 'rm -rf *.tgz || echo " '
